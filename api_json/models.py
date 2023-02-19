@@ -8,3 +8,6 @@ class Arduino(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.id_arduino}"
+
+
+'F1000000F1E30000F1E3A500F1E3A51B'

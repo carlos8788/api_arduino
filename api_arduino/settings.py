@@ -17,7 +17,24 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+CORS_ORIGIN_WHITELIST = (
+'http://apiarduino-production.up.railway.app',
+'http://192.168.1.80:8000',
+'parkingpruebas.ddns.net',
+'parkingpruebas.ddns.net:8000',
+"http://parkingpruebas.ddns.net",
+"http://parkingpruebas.ddns.net:8000",
 
+)
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -29,7 +46,9 @@ DEBUG = True
 # DEBUG = 'RENDER' not in os.environ
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['apiarduino-production.up.railway.app']
+ALLOWED_HOSTS = ['apiarduino-production.up.railway.app', 
+'http://192.168.1.21',
+'190.174.85.242']
 
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
