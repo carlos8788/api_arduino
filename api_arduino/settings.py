@@ -49,7 +49,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['https://apiarduino-production.up.railway.app', 
 'http://apiarduino-production.up.railway.app', 
 'http://192.168.1.21',
-'190.174.85.242']
+'190.174.85.242',
+'apiarduino-production.up.railway.app']
 
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
