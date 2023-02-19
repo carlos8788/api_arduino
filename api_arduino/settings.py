@@ -46,7 +46,8 @@ DEBUG = True
 # DEBUG = 'RENDER' not in os.environ
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['apiarduino-production.up.railway.app', 
+ALLOWED_HOSTS = ['https://apiarduino-production.up.railway.app', 
+'http://apiarduino-production.up.railway.app', 
 'http://192.168.1.21',
 '190.174.85.242']
 
