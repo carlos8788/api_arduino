@@ -189,9 +189,6 @@ if not DEBUG:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SECURE_SSL_REDIRECT = False
-SECURE_REDIRECT_EXEMPT=['https://apiarduino-production.up.railway.app', 
-'http://apiarduino-production.up.railway.app', 
-'http://192.168.1.21',
-'190.174.85.242',
-'apiarduino-production.up.railway.app']
+SECURE_SSL_REDIRECT = True
+SECURE_REDIRECT_URLS = ['^']
+SECURE_REDIRECT_EXEMPT = ['admin']
