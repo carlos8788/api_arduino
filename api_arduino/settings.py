@@ -90,30 +90,32 @@ WSGI_APPLICATION = 'api_arduino.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#         'USER': 'root',
-#         'PASSWORD': '123456',
-#         'NAME': 'django_api',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#         }
-#     }
-# }
+#mysql://root:o02tAzP4sK9utp8u467U@containers-us-west-99.railway.app:5717/railway
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'containers-us-west-99.railway.app',
+        'PORT': '5717',
+        'USER': 'root',
+        'PASSWORD': 'o02tAzP4sK9utp8u467U',
+        'NAME': 'railway',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Feel free to alter this value to suit your needs.
+#         default='sqlite:///db.sqlite3',
+#         conn_max_age=600
+#     )
+# }
 
 
 # Password validation
