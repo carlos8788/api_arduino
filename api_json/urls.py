@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ArduinoView, home
+from .views import ArduinoView
 
 urlpatterns=[
     path('tarjetas/', ArduinoView.as_view(), name='tarjetas'),
