@@ -29,7 +29,7 @@ DEBUG = True
 # DEBUG = 'RENDER' not in os.environ
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['apiarduino-production.up.railway.app']
 
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
