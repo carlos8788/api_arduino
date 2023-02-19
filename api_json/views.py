@@ -10,15 +10,27 @@ class ArduinoView(View):
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
-    def get(self, request):
-        tarjetas = list(Arduino.objects.values())
-        if len(tarjetas)>0:
-            datos = {'tarjetas': tarjetas}
-        # if len(tarjetas)>0:
-        #     datos = {'message': 'succes', 'tarjetas': tarjetas}
+    def get(self, request, id_arduino=''):
+        print(id_arduino, '***'*10)
+        if len(id_arduino)>0:
+            tarjetas=list(Arduino.objects.filter(id_arduino=id_arduino).values())
+            print(tarjetas, '***'*10)
+            if len(tarjetas)>0:
+                tarjeta = tarjetas[0]
+                dato = {'tarjeta': tarjeta}
+                return JsonResponse(dato)
+            else:
+                dato = {'tarjeta': 'no fount'}
+                return JsonResponse(dato)
         else:
-            datos = {'message': 'vacio'}
-        return JsonResponse(datos)
+            tarjetas = list(Arduino.objects.values())
+            if len(tarjetas)>0:
+                datos = {'tarjetas': tarjetas}
+            # if len(tarjetas)>0:
+            #     datos = {'message': 'succes', 'tarjetas': tarjetas}
+            else:
+                datos = {'message': 'vacio'}
+            return JsonResponse(datos)
 
     def post(self, request):
         pass
