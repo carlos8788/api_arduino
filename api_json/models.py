@@ -4,4 +4,7 @@ from django.db import models
 class Arduino(models.Model):
     id_arduino = models.CharField(primary_key=True, max_length=200)
     name = models.CharField(max_length=200)
-    permiso = models.CharField(max_length=10)
+    permiso = models.BooleanField(default=False )
+
+    def __str__(self):
+        return f"{self.name} - {self.id_arduino}"
